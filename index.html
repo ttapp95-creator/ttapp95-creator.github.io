@@ -4,63 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elite Mobile Detailing</title>
-  <meta name="description" content="Premium mobile detailing & ceramic coatings – we come to you.">
+  <meta name="description" content="Premium mobile detailing & ceramic coatings. We come to you.">
   <style>
-    :root {
-      --bg: #0a0a0a;
-      --text: #ffffff;
-      --accent: #00ff9d;
-      --gray: #888;
-    }
-    body {margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
-    header {
-      height:100vh;min-height:700px;
-      background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-                  url('https://images.unsplash.com/photo-1620717439850-4ab63af0c7d8?q=80&w=3270&auto=format&fit=crop') center/cover no-repeat;
-      display:flex;align-items:center;justify-content:center;text-align:center;position:relative;
-    }
-    header::before {
-      content:'';position:absolute;top:0;left:0;right:0;bottom:0;
-      background:rgba(10,10,10,0.4);backdrop-filter:blur(2px);
-    }
-    .hero-content {position:relative;z-index:2;max-width:1100px;padding:0 20px}
-    h1 {font-size:5.5rem;font-weight:900;margin:0;letter-spacing:-3px;line-height:1}
-    .tagline {font-size:2rem;font-weight:300;margin:20px 0 40px;opacity:0.9}
-    .btn {
-      background:var(--accent);color:#000;padding:18px 50px;border-radius:50px;font-size:1.3rem;font-weight:700;
-      text-decoration:none;display:inline-block;transition:all .3s;box-shadow:0 10px 30px rgba(0,255,157,0.4)
-    }
-    .btn:hover {transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,255,157,0.5)}
-    nav {
-      position:fixed;top:0;left:0;right:0;padding:25px 5%;background:rgba(10,10,10,0.8);backdrop-filter:blur(20px);
-      display:flex;justify-content:space-between;align-items:center;z-index:1000;font-weight:600;
-      border-bottom:1px solid rgba(255,255,255,0.1)
-    }
-    nav a {color:white;text-decoration:none;margin-left:40px;font-size:1.1rem;transition:color .3s}
-    nav a:hover {color:var(--accent)}
-    section {padding:140px 10%;max-width:1400px;margin:auto}
-    h2 {font-size:4rem;text-align:center;margin-bottom:80px;font-weight:800;letter-spacing:-1px}
-    .services {display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;text-align:center}
-    .service {padding:30px;border-radius:20px;background:rgba(255,255,255,0.03);transition:all .4s}
-    .service:hover {transform:translateY(-15px);background:rgba(255,255,255,0.06)}
-    .service h3 {font-size:1.8rem;margin:20px 0 15px}
-    .gallery {display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:20px}
-    .gallery img {width:100%;height:320px;object-fit:cover;border-radius:20px;transition:all .5s;box-shadow:0 20px 40px rgba(0,0,0,0.6)}
-    .gallery img:hover {transform:scale(1.03);box-shadow:0 30px 60px rgba(0,255,157,0.3)}
-    footer {text-align:center;padding:80px 20px;background:#000;color:#666;font-size:0.9rem}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:#000;color:#fff;line-height:1.4;overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;padding:20px 5%;display:flex;justify-content:space-between;align-items:center;z-index:1000;background:transparent;transition:background .3s}
+    nav.scrolled{background:rgba(0,0,0,0.85);backdrop-filter:blur(10px)}
+    nav .logo{font-size:1.8rem;font-weight:700}
+    nav a{color:#fff;text-decoration:none;margin-left:40px;font-weight:500}
+    nav a:hover{opacity:0.7}
+    section,header{position:relative;width:100%}
+    header{height:100vh;background:url('https://images.unsplash.com/photo-1620717439850-4ab63af0c7d8?q=80&w=3270&auto=format&fit=crop') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center}
+    .overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.4)}
+    .hero{max-width:1200px;padding:0 20px;position:relative;z-index:2}
+    h1{font-size:90px;font-weight:900;letter-spacing:-3px;margin-bottom:20px}
+    .subtitle{font-size:28px;font-weight:300;margin-bottom:50px;opacity:0.9}
+    .cta{background:#fff;color:#000;padding:16px 50px;border:none;border-radius:8px;font-size:18px;font-weight:600;cursor:pointer;transition:all .3s;display:inline-block;text-decoration:none}
+    .cta:hover{background:#eee}
+    .section-title{font-size:60px;font-weight:800;text-align:center;margin:140px auto 100px;max-width:1000px}
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:60px;max-width:1400px;margin:auto;padding:0 5%}
+    .service{text-align:center}
+    .service h3{font-size:32px;font-weight:700;margin:30px 0 15px}
+    .service p{font-size:18px;opacity:0.8;line-height:1.6}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:20px;padding:0 5%;max-width:1800px;margin:auto}
+    .gallery img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px}
+    #contact{padding:200px 5%;text-align:center}
+    #contact h2{font-size:70px;font-weight:800;margin-bottom:40px}
+    #contact p{font-size:24px;margin-bottom:60px;opacity:0.9}
+    footer{text-align:center;padding:80px 20px;font-size:14px;opacity:0.6}
     @media(max-width:768px){
-      h1{font-size:3.5rem}
-      .tagline{font-size:1.4rem}
-      nav a{margin-left:20px;font-size:1rem}
-      section{padding:100px 5%}
-      h2{font-size:3rem}
+      h1{font-size:50px}
+      .subtitle{font-size:20px}
+      .section-title{font-size:40px;margin:100px auto 60px}
+      #contact h2{font-size:50px}
+      nav a{margin-left:20px;font-size:14px}
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <div style="font-size:1.6rem;font-weight:800;">Elite Mobile Detailing</div>
+  <nav id="nav">
+    <div class="logo">Elite Mobile Detailing</div>
     <div>
       <a href="#services">Services</a>
       <a href="#gallery">Gallery</a>
@@ -69,51 +53,63 @@
   </nav>
 
   <header>
-    <div class="hero-content">
-      <h1>Pristine. Mobile.<br><span style="color:var(--accent)">Effortless.</span></h1>
-      <p class="tagline">Professional detailing & ceramic coatings delivered to your driveway</p>
-      <a href="#contact" class="btn">Book Now</a>
+    <div class="overlay"></div>
+    <div class="hero">
+      <h1>Pristine.<br>Mobile.<br>Effortless.</h1>
+      <p class="subtitle">Professional detailing & ceramic coatings delivered to your location</p>
+      <a href="#contact" class="cta">Book Now</a>
     </div>
   </header>
 
-  <section id="services">
-    <h2>Services</h2>
-    <div class="services">
-      <div class="service"><h3>Headlight Restoration</h3><p>Crystal-clear headlights in under an hour</p></div>
-      <div class="service"><h3>Full Detail</h3><p>Complete interior + exterior showroom transformation</p></div>
-      <div class="service"><h3>Interior Detail</h3><p>Deep clean, shampoo, leather conditioning, odor removal</p></div>
-      <div class="service"><h3>Exterior Detail</h3><p>Hand wash, clay, polish + premium sealant/wax</p></div>
-      <div class="service"><h3>Wash, Clay & Seal</h3><p>Decontamination + 6-month synthetic sealant</p></div>
+  <div class="section-title">Services</div>
+  <div class="services" id="services">
+    <div class="service">
+      <h3>Headlight Restoration</h3>
+      <p>Remove haze and oxidation. Restore clarity and safety in under an hour.</p>
     </div>
-  </section>
+    <div class="service">
+      <h3>Full Detail</h3>
+      <p>Complete interior + exterior transformation. Showroom finish guaranteed.</p>
+    </div>
+    <div class="service">
+      <h3>Interior Detail</h3>
+      <p>Deep cleaning, shampoo, leather treatment, odor elimination.</p>
+    </div>
+    <div class="service">
+      <h3>Exterior Detail</h3>
+      <p>Hand wash, clay bar, polish, premium sealant or wax.</p>
+    </div>
+    <div class="service">
+      <h3>Wash, Clay & Seal</h3>
+      <p>Decontamination wash + 6–12 month synthetic sealant protection.</p>
+    </div>
+  </div>
 
-  <section id="gallery">
-    <h2>Recent Work</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1620717439850-4ab63af0c7d8?q=80&w=2670&auto=format&fit=crop" alt="Water beading">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop" alt="Showroom shine">
-      <img src="https://images.unsplash.com/photo-1605559424843-0e2c2f1d45a2?q=80&w=2670&auto=format&fit=crop" alt="Full detail">
-      <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=2670&auto=format&fit=crop" alt="Interior">
-      <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2670&auto=format&fit=crop" alt="Exterior polish">
-      <img src="https://images.unsplash.com/photo-1606664515524-ed1285a81ded?q=80&w=2670&auto=format&fit=crop" alt="Headlights">
-    </div>
-  </section>
+  <div class="section-title">Recent Work</div>
+  <div class="gallery" id="gallery">
+    <img src="https://images.unsplash.com/photo-1620717439850-4ab63af0c7d8?q=80&w=3270&auto=format&fit=crop" alt="Ceramic water beading">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=3270&auto=format&fit=crop" alt="Showroom shine">
+    <img src="https://images.unsplash.com/photo-1605559424843-0e2c2f1d45a2?q=80&w=3270&auto=format&fit=crop" alt="Full detail">
+    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=3270&auto=format&fit=crop" alt="Interior detail">
+    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=3270&auto=format&fit=crop" alt="Exterior polish">
+    <img src="https://images.unsplash.com/photo-1606664515524-ed1285a81ded?q=80&w=3270&auto=format&fit=crop" alt="Headlight restoration">
+  </div>
 
   <section id="contact">
-    <h2>Get That Showroom Look</h2>
-    <p style="text-align:center;font-size:1.6rem;max-width:700px;margin:0 auto 50px;line-height:1.6">
-      We come to you — home or office.<br>
-      Text or call <strong>(123) 456-7890</strong><br>
-      <small style="color:#888">Serving [Your City] & surrounding areas</small>
-    </p>
-    <div style="text-align:center">
-      <a href="tel:+11234567890" class="btn">Call / Text Now</a>
-    </div>
+    <h2>Book Now</h2>
+    <p>We come to you — home or office<br>Serving [Your City] & surrounding areas</p>
+    <p style="font-size:40px;margin:50px 0">Call or Text <strong>(123) 456-7890</strong></p>
+    <a href="tel:+11234567890" class="cta">Contact</a>
   </section>
 
   <footer>
-    © 2025 Elite Mobile Detailing. All rights reserved.
+    © 2025 Elite Mobile Detailing
   </footer>
 
+  <script>
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50)
+    })
+  </script>
 </body>
 </html>
