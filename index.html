@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elite Mobile Detailing</title>
+  <meta name="description" content="Premium mobile car detailing & ceramic coatings brought to your doorstep." />
+  <style>
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#fff;color:#000;line-height:1.6;font-size:18px}
+    header{height:100vh;min-height:650px;background:linear-gradient(rgba(0,0,0,0.48),rgba(0,0,0,0.48)),url('https://images.unsplash.com/photo-1620717439850-4ab63af0c7d8?q=80&w=3270&auto=format&fit=crop') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;color:white}
+    header h1{font-size:4.8rem;font-weight:700;margin:0 0 1rem;letter-spacing:-1.5px}
+    header p{font-size:1.65rem;max-width:800px;margin:0 auto 2.5rem;opacity:.95}
+    nav{position:fixed;top:0;left:0;right:0;padding:1.5rem 5%;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);z-index:100;display:flex;justify-content:space-between;align-items:center;font-weight:600;border-bottom:1px solid #eee}
+    nav a{color:#000;text-decoration:none;margin-left:2.5rem}
+    nav a:hover{color:#007aff}
+    section{padding:120px 10%;max-width:1400px;margin:0 auto}
+    h2{font-size:3rem;text-align:center;font-weight:700;margin-bottom:4rem}
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3rem;text-align:center}
+    .service h3{font-size:1.8rem;margin:1.5rem 0 1rem}
+    .service p{color:#333;font-size:1.1rem}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem}
+    .gallery img{width:100%;height:300px;object-fit:cover;border-radius:14px;transition:transform .4s;box-shadow:0 4px 20px rgba(0,0,0,0.1)}
+    .gallery img:hover{transform:scale(1.04)}
+    .btn{background:#007aff;color:white;padding:1.1rem 3rem;border:none;border-radius:14px;font-size:1.25rem;font-weight:600;text-decoration:none;display:inline-block;box-shadow:0 4px 15px rgba(0,122,255,.3);transition:all .3s}
+    .btn:hover{background:#0066cc;transform:translateY(-2px)}
+    footer{text-align:center;padding:4rem;background:#f8f8f8;color:#555;font-size:.95rem;border-top:1px solid #eee}
+    @media(max-width:768px){header h1{font-size:3.2rem}header p{font-size:1.3rem}section{padding:80px 5%}}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div style="font-weight:700;font-size:1.5rem;">Elite Mobile Detailing</div>
+    <div>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <div>
+      <h1>Pristine. Mobile. Effortless.</h1>
+      <p>Professional detailing & ceramic coatings brought directly to your driveway.<br>Hydrophobic protection that lasts for years.</p>
+      <a href="#contact" class="btn">Book Now</a>
+    </div>
+  </header>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service"><h3>Headlight Restoration</h3><p>Remove oxidation and haze. Restore clarity and safety in under an hour.</p></div>
+      <div class="service"><h3>Full Detail</h3><p>Complete interior + exterior transformation. The ultimate showroom finish.</p></div>
+      <div class="service"><h3>Interior Detail</h3><p>Deep cleaning, shampoo, leather treatment, and odor elimination.</p></div>
+      <div class="service"><h3>Exterior Detail</h3><p>Hand wash, clay bar, polish, and premium sealant or wax application.</p></div>
+      <div class="service"><h3>Wash, Clay & Seal</h3><p>Decontamination wash + clay bar + 6-month synthetic sealant protection.</p></div>
+    </div>
+  </section>
+
+  <section id="gallery" style="background:#f9f9f9;">
+    <h2>Recent Work</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1620717439850-4ab63af0c7d8?q=80&w=2670&auto=format&fit=crop" alt="Ceramic coating water beading">
+      <img src="https://images.unsplash.com/photo-1606664515524-ed1285a81ded?q=80&w=2670&auto=format&fit=crop" alt="Headlight restoration">
+      <img src="https://images.unsplash.com/photo-1605559424843-0e2c2f1d45a2?q=80&w=2670&auto=format&fit=crop" alt="Full detail">
+      <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=2670&auto=format&fit=crop" alt="Interior detail">
+      <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2670&auto=format&fit=crop" alt="Exterior polish">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop" alt="Showroom shine">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Ready for that showroom look?</h2>
+    <p style="text-align:center;font-size:1.4rem;max-width:700px;margin:0 auto 3rem;">
+      We come to you – home or office.<br>
+      Text or call: <strong>(123) 456-7890</strong><br>
+      Email: <strong>hello@elitemobiledetailing.com</strong>
+    </p>
+    <div style="text-align:center;"><a href="tel:+11234567890" class="btn">Call / Text Now</a></div>
+  </section>
+
+  <footer>
+    © 2025 Elite Mobile Detailing • Serving [Your City & Surrounding Areas]
+  </footer>
+
+</body>
+</html>
